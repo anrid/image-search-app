@@ -4,7 +4,7 @@ A tiny image search app using the Unslash API.
 
 Purposefully written to be as small as possible _without sacrificing_ overall readability and code structure!
 
-construction: [WIP] construction:
+:construction: [WIP] :construction:
 
 ### Demo!
 
