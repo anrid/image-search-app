@@ -39,23 +39,25 @@ now
 
   I love this particular combination of front-end tech.
 
-  - JavaScript to speed things up a bit. Don't get me wrong, I love TS, but JS + ESLint felt more than adequate for this project.
-  - React is easy to use.
-  - MST feels more natural than Redux.
-  - Parcel just works! Can't say the same thing about Webpack.
-  - Styled components are have completely changed how I build front-ends.
-  - Material-UI React components = awesome.
-  - Vercel amazing service that's super-easy to use.
+  - Used pure _JavaScript_ to speed things up a bit. Don't get me wrong, I love TS, but _JS + ESLint_ felt more than adequate for this project.
+  - _React_ is easy to use.
+  - _Mobx State Tree_ feels more natural than Redux.
+  - _Parcel_ just works! Can't say the same thing about Webpack.
+  - _Styled Components_ are have completely changed how I build front-ends.
+  - _Material-UI_ React components = awesome.
+  - _Vercel_ is an amazing service. Super-easy to use.
 
 - Do you have any strong rationale for why you made specific design decisions (software architecture design) over alternatives?
 
   Tried following standard best practices when it comes to folder structure, naming, etc.
 
-  Haven't done front-end programming in a while, and boy do things change fast!
+  Haven't done front-end programming in a while, and boy do things **change fast!**
 
 - Do you have any strong rationale for why you made specific implementation decisions over alternatives?
 
   Not really. There are only so many ways that this particular front-end stack can be used.
+  
+  I did try to keep things _as simple as possible_.
 
 - What else would you like to improve if you have more time? This can be in simple format like a TODO bullet points.
 
