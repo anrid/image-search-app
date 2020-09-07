@@ -43,7 +43,7 @@ now
   - _React_ is easy to use.
   - _Mobx State Tree_ feels more natural than Redux.
   - _Parcel_ just works! Can't say the same thing about Webpack.
-  - _Styled Components_ are have completely changed how I build front-ends.
+  - _Styled Components_ have **completely changed** how I build front-ends.
   - _Material-UI_ React components = awesome.
   - _Vercel_ is an amazing service. Super-easy to use.
 
