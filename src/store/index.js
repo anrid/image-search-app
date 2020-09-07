@@ -9,6 +9,8 @@ const RootModel = types.model('RootModel', {
 
 export const rootStore = RootModel.create({
   search: {
+    total: 0,
+    total_pages: 0,
     query: '',
     state: 'done',
     images: [],

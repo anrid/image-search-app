@@ -5,11 +5,18 @@ import { useMst } from '../../store'
 import CircularProgress from '@material-ui/core/CircularProgress'
 
 const Wrapper = styled.section`
-  padding: 8rem 2rem;
+  padding: 4rem 2rem;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
+`
+
+const ProgressWrapper = styled.section`
+  padding: 8rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 const Image = styled.div`
@@ -27,9 +34,9 @@ const SearchResult = () => {
 
   if (root.search.state === 'pending') {
     return (
-      <Wrapper>
+      <ProgressWrapper>
         <CircularProgress size={150} />
-      </Wrapper>
+      </ProgressWrapper>
     )
   }
 

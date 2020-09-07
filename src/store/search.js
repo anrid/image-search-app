@@ -4,6 +4,8 @@ import * as API from '../api/api'
 
 export const Search = types
   .model({
+    total: types.number,
+    total_pages: types.number,
     query: types.string,
     state: types.enumeration('State', ['pending', 'done', 'error']),
     images: types.array(Image),
@@ -18,7 +20,15 @@ export const Search = types
         self.state = 'pending'
 
         try {
-          self.images = yield API.search(self.query)
+          const result = yield API.search(self.query)
+          console.log(
+            `Image search completed: found ${result.total} images and ${result.total_pages} pages`
+          )
+
+          self.total = result.total
+          self.total_pages = result.total_pages
+          self.images = result.results
+
           self.state = 'done'
         } catch (error) {
           console.error('Image search failed:', error)
