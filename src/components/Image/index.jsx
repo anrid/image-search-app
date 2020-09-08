@@ -53,7 +53,7 @@ const Links = styled.div`
   padding: 1rem;
 `
 
-const UserProfile = styled.div`
+const UserProfile = styled.a`
   position: absolute;
   bottom: 0;
   left: 0;
@@ -68,12 +68,9 @@ const UserProfile = styled.div`
   padding: 0 1rem;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
-
-  a {
-    color: white;
-    font-size: 1.2rem;
-    text-decoration: none;
-  }
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
 `
 
 const UserProfilePhoto = styled.div`
@@ -86,6 +83,12 @@ const UserProfilePhoto = styled.div`
   background: url(${({ url }) => url});
   margin-right: 1rem;
   flex: none;
+`
+
+const UserProfileName = styled.div`
+  width: 10rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `
 
 const Image = ({ id }) => {
@@ -105,11 +108,9 @@ const Image = ({ id }) => {
           </Link>
           <Link>favorite</Link>
         </Links>
-        <UserProfile>
+        <UserProfile href={image.user.links.html} target="_blank">
           <UserProfilePhoto url={image.user.profile_image.small} />
-          <a href={image.user.links.html} target="_blank">
-            {image.user.username}
-          </a>
+          <UserProfileName>{image.user.username}</UserProfileName>
         </UserProfile>
       </Overlay>
     </Wrapper>
