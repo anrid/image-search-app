@@ -3,6 +3,7 @@ import { observer } from 'mobx-react'
 import styled from 'styled-components'
 import { useMst } from '../../store'
 import CircularProgress from '@material-ui/core/CircularProgress'
+import Image from '../Image'
 
 const Wrapper = styled.section`
   padding: 4rem 2rem;
@@ -19,20 +20,10 @@ const ProgressWrapper = styled.section`
   align-items: center;
 `
 
-const Image = styled.div`
-  width: 15rem;
-  height: 15rem;
-  background-size: cover;
-  background-position: center center;
-  background-image: url(${(props) => props.url});
-  border-radius: 1rem;
-  margin: 0.5rem;
-`
-
 const SearchResult = () => {
-  const root = useMst()
+  const { search } = useMst()
 
-  if (root.search.state === 'pending') {
+  if (search.state === 'pending') {
     return (
       <ProgressWrapper>
         <CircularProgress size={150} />
@@ -42,8 +33,8 @@ const SearchResult = () => {
 
   return (
     <Wrapper>
-      {root.search.images.map((x) => (
-        <Image url={x.urls.thumb} key={x.id} />
+      {search.images.map((x) => (
+        <Image id={x.id} key={x.id} />
       ))}
     </Wrapper>
   )

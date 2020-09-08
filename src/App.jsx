@@ -15,11 +15,13 @@ const Wrapper = styled.section`
 
 const App = () => (
   <Provider value={rootStore}>
-    <Wrapper>
-      <Title>Another visitor! Stay a while; Stay FOREVER!</Title>
-      <ImageSearchBar />
-      <SearchResult />
-    </Wrapper>
+    <React.StrictMode>
+      <Wrapper>
+        <Title>Another visitor! Stay a while; Stay FOREVER!</Title>
+        <ImageSearchBar />
+        <SearchResult />
+      </Wrapper>
+    </React.StrictMode>
   </Provider>
 )
 

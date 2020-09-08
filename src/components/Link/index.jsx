@@ -1,19 +1,27 @@
 import styled, { css } from 'styled-components'
 
 export const Link = styled.a`
+  font-size: 1rem;
+  line-height: 1;
   display: inline-block;
-  border-radius: 3px;
-  padding: 0.5rem 0;
-  margin: 0.5rem 1rem;
-  width: 11rem;
+  border-radius: 0.2rem;
+  padding: 0.25rem 0.25rem;
+  margin: 0 0.25rem;
   background: transparent;
   color: white;
-  border: 2px solid white;
+  border: 0.2rem solid white;
+  text-decoration: none;
 
   ${(props) =>
-    props.primary &&
+    props.active &&
     css`
-      background: white;
-      color: black;
+      background: deepskyblue !important;
+      color: white !important;
+      border: 0.2rem solid deepskyblue;
     `}
+
+  &:hover {
+    background: white;
+    color: black;
+  }
 `

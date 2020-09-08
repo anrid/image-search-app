@@ -19,7 +19,10 @@ yarn start
 # Production build:
 yarn build
 
-# Deploy via https://vercel.com/ dashboard, or:
+# Deploy:
+# This happens automatically via Vercel's Github integration.
+# A new version of the app is deployed on every merge to master!
+# Alternatively, we can use their CLI tool to deploy:
 now
 ```
 
@@ -31,7 +34,7 @@ now
 - Mobx State Tree :scream_cat:
 - Styled Components :joy_cat:
 - Material-UI :older_woman:
-- Vercel (to host our demo) :suspect:
+- [Vercel](https://vercel.com/) to host our app :suspect:
 
 ### Answers
 
@@ -56,7 +59,7 @@ now
 - Do you have any strong rationale for why you made specific implementation decisions over alternatives?
 
   Not really. There are only so many ways that this particular front-end stack can be used.
-  
+
   I did try to keep things _as simple as possible_.
 
 - What else would you like to improve if you have more time? This can be in simple format like a TODO bullet points.

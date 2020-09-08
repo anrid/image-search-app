@@ -37,9 +37,14 @@ export const Search = types
       }
     }),
     addImage(image) {
-      let found = self.images.find((x) => x.id === image.id)
+      const found = self.images.find((x) => x.id === image.id)
       if (!found) {
         self.images.push(image)
       }
+    },
+  }))
+  .views((self) => ({
+    getImage(id) {
+      return self.images.find((x) => x.id === id)
     },
   }))
